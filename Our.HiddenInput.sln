@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.HiddenInput", "Our.HiddenInput.csproj", "{B79D861C-9F8D-479B-A3F3-35C2522B2904}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B79D861C-9F8D-479B-A3F3-35C2522B2904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79D861C-9F8D-479B-A3F3-35C2522B2904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79D861C-9F8D-479B-A3F3-35C2522B2904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79D861C-9F8D-479B-A3F3-35C2522B2904}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14DF92D0-2792-438D-B15A-65D2B42D0D59}
+	EndGlobalSection
+EndGlobal

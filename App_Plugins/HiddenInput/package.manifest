@@ -1,0 +1,26 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "Our.HiddenInput",
+      "name": "Hidden Input",
+      "icon": "icon-book",
+      "group": "Common",
+      "editor": {
+        "view": "~/App_Plugins/HiddenInput/hiddeninput.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Value",
+            "description": "",
+            "key": "value",
+            "view": "textstring"
+          }
+        ]
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/HiddenInput/hiddeninput.controller.js"
+  ]
+}
