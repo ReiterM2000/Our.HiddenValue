@@ -1,50 +1,54 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>Our.Umbraco.HiddenInput</PackageId>
-    <Company>Umbraco Community</Company>
-    <Authors>Michael Reiter</Authors>
-    <Description>A property type which only allows developers to set values</Description>
-    <PackageProjectUrl>https://github.com/ReiterM2000/Our.HiddenInput</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ReiterM2000/Our.HiddenInput</RepositoryUrl>
-    <PackageIcon>Icon.png</PackageIcon>
-    <PackageIconUrl />
-    <PackageTags>Umbraco 9; Property Type;Property Types; UmbracoCMS, Our</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageId>Our.Umbraco.HiddenInput</PackageId>
+		<Company>Umbraco Community</Company>
+		<Authors>Michael Reiter</Authors>
+		<Description>A property type which only allows developers to set values</Description>
+		<PackageProjectUrl>https://github.com/ReiterM2000/Our.HiddenInput</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ReiterM2000/Our.HiddenInput</RepositoryUrl>
+		<PackageIcon>Icon.png</PackageIcon>
+		<PackageIconUrl />
+		<PackageTags>Umbraco 9; Property Type;Property Types; UmbracoCMS, Our</PackageTags>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Docs\**" />
-    <EmbeddedResource Remove="Docs\**" />
-    <None Remove="Docs\**" />
-    <None Include="Icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Docs\**" />
+		<EmbeddedResource Remove="Docs\**" />
+		<None Remove="Docs\**" />
+		<None Include="Icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Remove="App_Plugins\HiddenInput\hiddeninput.controller.js" />
-    <None Remove="App_Plugins\HiddenInput\hiddeninput.html" />
-    <None Remove="App_Plugins\HiddenInput\package.manifest" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove=".gitignore" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="App_Plugins\HiddenInput\hiddeninput.controller.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Plugins\HiddenInput\hiddeninput.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Plugins\HiddenInput\package.manifest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="App_Plugins\HiddenInput\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+		<None Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<BuildFiles Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</BuildFiles>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Umbraco.Cms.Core" Version="9.0.0" />
+	</ItemGroup>
 
 </Project>
