@@ -1,0 +1,19 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<HiddenInputContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\HiddenInput\**\*.*</HiddenInputContentFilesPath>
+	</PropertyGroup>
+
+	<Target Name="CopyHiddenInputAssets" BeforeTargets="Build">
+		<ItemGroup>
+			<HiddenInputContentFiles Include="$(HiddenInputContentFilesPath)" />
+		</ItemGroup>
+		<Message Text="Copying HiddenInput files: $(HiddenInputContentFilesPath) - #@(HiddenInputContentFiles->Count()) files"  Importance="high" />
+		<Copy
+            SourceFiles="@(HiddenInputContentFiles)"
+            DestinationFiles="@(HiddenInputContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\HiddenInput\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+	</Target>
+
+</Project>
