@@ -1,0 +1,19 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<HiddenValueContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\HiddenValue\**\*.*</HiddenValueContentFilesPath>
+	</PropertyGroup>
+
+	<Target Name="CopyHiddenValueAssets" BeforeTargets="Build">
+		<ItemGroup>
+			<HiddenValueContentFiles Include="$(HiddenValueContentFilesPath)" />
+		</ItemGroup>
+		<Message Text="Copying HiddenValue files: $(HiddenValueContentFilesPath) - #@(HiddenValueContentFiles->Count()) files"  Importance="high" />
+		<Copy
+            SourceFiles="@(HiddenValueContentFiles)"
+            DestinationFiles="@(HiddenValueContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\HiddenValue\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+	</Target>
+
+</Project>

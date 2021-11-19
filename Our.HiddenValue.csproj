@@ -4,12 +4,12 @@
 		<TargetFramework>net5.0</TargetFramework>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageId>Our.Umbraco.HiddenInput</PackageId>
+		<PackageId>Our.Umbraco.HiddenValue</PackageId>
 		<Company>Umbraco Community</Company>
 		<Authors>Michael Reiter</Authors>
 		<Description>A property type which only allows developers to set values</Description>
-		<PackageProjectUrl>https://github.com/ReiterM2000/Our.HiddenInput</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/ReiterM2000/Our.HiddenInput</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/ReiterM2000/Our.HiddenValue</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ReiterM2000/Our.HiddenValue</RepositoryUrl>
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageIconUrl />
 		<PackageTags>Umbraco 9; Property Type;Property Types; UmbracoCMS, Our</PackageTags>
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-		<Content Include="App_Plugins\HiddenInput\**\*.*">
+		<Content Include="App_Plugins\HiddenValue\**\*.*">
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
 		</Content>

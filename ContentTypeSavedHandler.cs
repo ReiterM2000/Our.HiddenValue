@@ -9,7 +9,7 @@ using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Web;
 
-namespace Our.HiddenInput
+namespace Our.HiddenValue
 {
     public class ContentTypeSavedHandler : INotificationHandler<ContentTypeSavedNotification>
     {

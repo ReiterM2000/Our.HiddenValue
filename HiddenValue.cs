@@ -7,18 +7,18 @@ using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
 
-namespace Our.HiddenInput
+namespace Our.HiddenValue
 {
     /// <summary>
     /// Composer for registering the notification handler
     /// </summary>
-    public class HiddenInputComposer : IComposer
+    public class HiddenValue : IComposer
     {
         public void Compose(IUmbracoBuilder builder)
         {
-            builder.PropertyValueConverters().Append(typeof(HiddenInputPropertyValueConverter));
-            builder.AddNotificationHandler<SendingContentNotification, HideHiddenInput>();
-            builder.AddNotificationHandler<ContentSavingNotification, SaveHiddenInput>();
+            builder.PropertyValueConverters().Append(typeof(HiddenValuePropertyValueConverter));
+            builder.AddNotificationHandler<SendingContentNotification, HideHiddenValue>();
+            builder.AddNotificationHandler<ContentSavingNotification, SaveHiddenValue>();
             builder.AddNotificationHandler<ContentTypeSavedNotification, ContentTypeSavedHandler>();
         }
     }

@@ -8,22 +8,22 @@ using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Core.Services;
 
-namespace Our.HiddenInput
+namespace Our.HiddenValue
 {
     /// <summary>
     /// Notificationhandler for the ContentSavingNotification
     /// </summary>
-    public class SaveHiddenInput : INotificationHandler<ContentSavingNotification>
+    public class SaveHiddenValue : INotificationHandler<ContentSavingNotification>
     {
         private readonly IDataTypeService _service;
 
-        public SaveHiddenInput(IDataTypeService service)
+        public SaveHiddenValue(IDataTypeService service)
         {
             _service = service;
         }
 
         /// <summary>
-        /// Checking if the content contains a property of the hiddeninput propertytype
+        /// Checking if the content contains a property of the HiddenValue propertytype
         /// if one is found the datatype is is gotten and based on the configuration the value is set.
         /// </summary>
         /// <param name="notification">Value of the ContentSavingNotification</param>
@@ -37,10 +37,10 @@ namespace Our.HiddenInput
                     foreach (var prop in hiddenProperties)
                     {
                         IDataType type = _service.GetDataType(prop.PropertyType.DataTypeId);
-                        Dictionary<string, object> hiddenInput = type.Configuration as Dictionary<string, object>;
-                        if(hiddenInput != null)
+                        Dictionary<string, object> HiddenValue = type.Configuration as Dictionary<string, object>;
+                        if(HiddenValue != null)
                         {
-                            prop.SetValue(hiddenInput[Constants.ConfigurationAlias]);
+                            prop.SetValue(HiddenValue[Constants.ConfigurationAlias]);
                         }
                     }
                 }

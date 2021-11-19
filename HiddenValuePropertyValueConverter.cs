@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.PropertyEditors;
 
-namespace Our.HiddenInput
+namespace Our.HiddenValue
 {
-    public class HiddenInputPropertyValueConverter : PropertyValueConverterBase, IPropertyValueConverter
+    public class HiddenValuePropertyValueConverter : PropertyValueConverterBase, IPropertyValueConverter
     {
         public override object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview)
         {

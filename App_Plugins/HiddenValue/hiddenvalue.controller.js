@@ -1,5 +1,5 @@
 ﻿angular.module("umbraco")
-    .controller("Our.HiddenInputController",
+    .controller("Our.HiddenValueController",
         function () {
 
         });
