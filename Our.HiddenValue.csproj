@@ -13,10 +13,14 @@
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageIconUrl />
 		<PackageTags>Umbraco 9; Property Type;Property Types; UmbracoCMS, Our</PackageTags>
+		<Copyright></Copyright>
+		<AssemblyVersion>9.0.0.0</AssemblyVersion>
+		<FileVersion>9.0.0.0</FileVersion>
+		<Version>9.0.0</Version>
 	</PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.1" />
-        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.1" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +32,9 @@
             <Pack>True</Pack>
             <PackagePath>buildTransitive</PackagePath>
         </None>
+        <Compile Remove="Docs\**" />
+        <EmbeddedResource Remove="Docs\**" />
+        <None Remove="Docs\**" />
         <None Include="Icon.png">
           <Pack>True</Pack>
           <PackagePath></PackagePath>
