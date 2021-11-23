@@ -7,7 +7,7 @@ This package is perfect for you if you have constants within your code that coul
 ## Usage
 When creating or changing a HiddenValue field you are able to insert a Value as string. This value can only be changed here!
 If you are updating the value every content that has the property type on it will be updated to have the updated value.
-![](https://raw.githubusercontent.com/ReiterM2000/Our.HiddenValue/main/Docs/Images/PropertyType.png)
-![](https://raw.githubusercontent.com/ReiterM2000/Our.HiddenValue/main/Docs/Images/NewHiddenValue.png)  
+![](https://raw.githubusercontent.com/ReiterM2000/Our.HiddenValue/main/Docs/Images/PropertyType.png) 
+![](https://raw.githubusercontent.com/ReiterM2000/Our.HiddenValue/main/Docs/Images/NewHiddenValue.png) 
 
 In code the property type will return a simple string containing the entered value.
